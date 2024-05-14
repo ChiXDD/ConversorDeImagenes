@@ -1,0 +1,29 @@
+extends plantilla2
+
+block content
+  .regis-container
+    h1(class='title') #{titulo}
+
+    form(action='/registro_nuevo' method='POST' class='login-form')
+      .form-group
+        label(for='nombre' class='form-label') Nombre
+        input(type='text' name='nombre' id='nombre' placeholder='Nombre completo' class='form-input', required)
+
+      .form-group
+        label(for='email' class='form-label') Email
+        input(type='email' name='email' id='email' placeholder='Correo electrónico' class='form-input', required)
+
+      .form-group
+        label(for='password' class='form-label') Contraseña
+        input(type='password' name='password' id='password' placeholder='Contraseña' class='form-input', required)
+
+      .form-group
+        label(for='confirmPassword' class='form-label') Confirmar Contraseña
+        input(type='password' name='confirmPassword' id='confirmPassword' placeholder='Confirmar contraseña' class='form-input', required)
+
+      .form-group
+        button(type='submit' class='submit-button') Crear cuenta
+
+    .reg-container
+      p ¿Ya tienes cuenta?
+      a(href='/inicio_sesion' class='register-link') Inicia Sesión

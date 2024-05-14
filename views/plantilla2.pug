@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Conversor de Imágenes
+    link(rel='stylesheet', href='/css/styles.css')
+  body
+    nav
+      ul(class='navbar')
+        .inicio
+          li
+            a(href='/' class='linknav') Inicio 
+        .cuentas
+          li
+            a(href='/inicio_sesion' class='linknav') Iniciar Sesión
+          li
+            a(href='/registro' class='btn_registrar') Registrarse
+    .container
+      block content

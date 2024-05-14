@@ -1,0 +1,10 @@
+extends plantilla
+
+block content
+
+    .contenedor-principal
+      h1 #{titulo}
+      h2 Bienvenido al conversor a PNG
+      form(action="http://localhost:3000/convertirPNG" enctype="multipart/form-data" method="post" class='form-subir')
+        input(type="file" name="conPNG" multiple="true" class='btn-subir' required)
+        input(type="submit" value="Convertir a PNG" class='btn-mandar')

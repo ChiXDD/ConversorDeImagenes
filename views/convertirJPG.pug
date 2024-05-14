@@ -1,0 +1,10 @@
+extends plantilla
+
+block content
+
+    .contenedor-principal
+      h1 #{titulo}
+      h2 Bienvenido al conversor a JPG
+      form(action="http://localhost:3000/convertirJPG" enctype="multipart/form-data" method="post" class='form-subir')
+        input(type="file" name="conJPG" multiple="true" class='btn-subir' required)
+        input(type="submit" value="Convertir a JPG" class='btn-mandar')

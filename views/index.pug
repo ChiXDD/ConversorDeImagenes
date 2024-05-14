@@ -1,0 +1,27 @@
+extends plantilla 
+
+block content
+
+  .contenedor-principal
+    h1 #{titulo}
+    h2 #{subtitulo}
+    h2 Seleccione el formato en el que quieres descargar tu imágenes
+
+    if user === ''
+      h2 Creditos restantes: #{credits}
+    .contenedor-convertidores
+      a(href="/convertirPNG" class='btn-convertidor') Convertir a PNG
+      a(href="/convertirJPEG" class='btn-convertidor') Convertir a JPEG
+      a(href="/convertirJPG" class='btn-convertidor') Convertir a JPG
+      a(href="/convertirWEBP" class='btn-convertidor') Convertir a WEBP
+
+    // Se agrega un evento para mostrar el mensaje de error en caso de que exista.
+    script.
+      document.addEventListener("DOMContentLoaded", function() {
+        const params = new URLSearchParams(window.location.search);
+        const error = params.get('error');
+        if (error) {
+            alert(error);
+        }
+      });
+
